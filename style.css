@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    background: #e3e3e3;
+    margin: 50px;
+    box-shadow: 0 50px 75px rgba(0, 0, 0, 0.1); /* Fixed box-shadow */
+    border-left: 50px solid lightblue;
+    border-right: 50px solid lightblue;
+}
+
+.container .top {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 40px;
+    padding-bottom: 0;
+}
+
+.container .top .imgBx {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container .top .imgBx .box {
+    position: relative;
+    width: 70%;
+    min-width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.container .top .imgBx .box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .top .profileText {
+    position: relative;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.container .top .profileText h3 {
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
+    font-weight: 600;
+    color: #333;
+}
+
+.container .top .profileText h3 span {
+    position: relative;
+    font-size: 0.5em;
+    font-weight: 300;
+    top: -10px;
+}
+
+.container .contentBox {
+    position: relative;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 40px 40px;
+}
+
+.container .contentBox h3 {
+    border-left: 4px solid #ed55b8;
+    padding-left: 10px;
+    line-height: 1em;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.container .contentBox ul {
+    position: relative;
+    margin: 10px 0;
+}
+
+.container .contentBox ul li {
+    list-style: none;
+    margin: 25px 0;
+    line-height: 1em;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+}
+
+.container .contentBox ul li ion-icon {
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: #3590d2;
+}
+
+.container .contentBox ul.education li {
+    flex-direction: column;
+    margin: 25px 0;
+}
+
+h5 {
+    color: #3590d2;
+}
+
+h4 {
+    color: #333;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+h6 {
+    color: #666;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.language li {
+    flex-direction: column;
+}
+
+.language li span {
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.language .percent {
+    position: relative;
+    width: 100%;
+    background: #e3e3e3;
+    height: 6px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: block;
+    overflow: hidden;
+}
+
+.language .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #3590d2;
+}
+
+.container .contentBox ul.interest {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container .contentBox ul.interest li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.container .contentBox ul.interest li .icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #3590d2;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .contentBox ul.interest li .icon ion-icon {
+    color: #fff;
+    margin-right: 0;
+}
+
+p {
+    font-weight: 300; 
+}
+
+.rightSide {
+    padding-left: 40px;
+}
+
+.about .box .pro h5 {
+    color: #3590d2;
+    font-weight: 600;
+}
+
+.about .box .pro h5:nth-child(1) {
+    color: #3590d2;
+}
+
+@media (max-width: 576px) {
+    .container {
+        margin: 15px;
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .container .top {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .container .top .profileText h3 {
+        font-size: 1.5em;
+        line-height: 1.1em;
+    }
+
+    .container .top .imgBx .box {
+        width: 50%;
+    }
+
+    .container .contentBox {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .container .contentBox ul.interest {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .container .top {
+        grid-template-columns: 1fr 1fr;
+        padding: 15px;
+    }
+
+    .container .top .profileText h3 {
+        font-size: 2em;
+        line-height: 1.2em;
+    }
+
+    .container .top .imgBx .box {
+        width: 80%;
+    }
+
+    .container .contentBox {
+        grid-template-columns: 1fr 1fr;
+        padding: 15px;
+    }
+
+    .container .contentBox ul.interest {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.language .percent {
+    height: 6px;
+    margin: 10px 0;
+    background: #ddd;
+    display: block;
+    overflow: hidden;
+}
+
+.language .percent div {
+    height: 100%;
+    background: #ed55b8;
+}
+@media (max-width: 375px) {
+    body {
+        background: #f9f9f9; /* Ensures the body has a uniform background color */
+    }
+
+    .container {
+        margin: 10px; /* Reduced margin for smaller screens */
+        padding: 10px; /* Reduced padding for better fit */
+        max-width: 100%; /* Ensures it takes the full width */
+        border-left: 20px solid lightblue; /* Reduced border size */
+        border-right: 20px solid lightblue; /* Reduced border size */
+    }
+
+    .container .top {
+        display: flex; /* Switch to flexbox for better alignment */
+        flex-direction: column; /* Stack elements vertically */
+        padding: 10px; /* Reduced padding */
+    }
+
+    .container .top .imgBx {
+        width: 100%; /* Full width for smaller screens */
+        display: flex;
+        justify-content: center; /* Centering the image */
+    }
+
+    .container .top .imgBx .box {
+        width: 80%; /* Adjust image box size */
+        min-width: 150px; /* Minimum size to maintain image visibility */
+        margin: 0 auto; /* Centering */
+    }
+
+    .container .top .profileText {
+        padding: 10px; /* Adjusted padding */
+        text-align: center; /* Center text for better fit */
+    }
+
+    .container .top .profileText h3 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+        line-height: 1.2em; /* Maintain line height */
+    }
+
+    .container .contentBox {
+        display: flex; /* Use flexbox for content alignment */
+        flex-direction: column; /* Stack content vertically */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .container .contentBox h3 {
+        font-size: 1.5em; /* Adjust heading size */
+        margin-top: 20px; /* Adjusted margin */
+    }
+
+    .container .contentBox ul.interest {
+        display: flex; /* Flex for list items */
+        flex-direction: column; /* Stack interests */
+        padding: 0; /* Remove default padding */
+    }
+
+    .container .contentBox ul li {
+        margin: 10px 0; /* Reduce margin for list items */
+    }
+}
+
+
